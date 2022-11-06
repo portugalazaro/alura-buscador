@@ -1,0 +1,21 @@
+{
+    "name": "portuga/buscar-alura",
+    "autoload": {
+        "psr-4": {
+            "Portuga\\BuscarAlura\\": "src/"
+        }
+    },
+
+    "authors": [
+        {
+            "name": "Lázaro Portugal",
+            "email": "portugallazaro@gmail.com"
+        }
+    ],
+
+    "require": {
+        "guzzlehttp/guzzle": "^7.5",
+        "symfony/dom-crawler": "^6.1",
+        "symfony/css-selector": "^6.1"
+    }
+}

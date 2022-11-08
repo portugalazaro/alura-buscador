@@ -2,22 +2,18 @@
 
 
 require_once "vendor/autoload.php";
+require_once "src/Buscador.php";
 
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
+// use Alura\BuscadorCursos\Buscador;
 
-$cliente = new Client();
-
-$response = $cliente->request("GET", "https://www.alura.com.br/cursos-online-programacao/php");
-
-$html = $response->getBody();
-
-$crawler  = new Crawler();
-$crawler->addHtmlContent($html);
+$curso = new Buscador(new Client(), new Crawler());
 
 
-$cursos = $crawler->filter('.card-curso__nome');
+$response = $curso->buscar('https://www.alura.com.br/cursos-online-programacao/php');
 
-foreach($cursos as $curso){
+foreach($response as $curso){
     echo $curso->textContent . PHP_EOL;
 }
+

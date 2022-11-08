@@ -24,7 +24,11 @@ class Buscador
         $response = $this->httpClient->request('GET',$url);
         $html = $response->getBody();
 
-        
+        $this->crawler($html);
+
+        $cursos = $crawler->filter('.card-curso__nome');
+
+        return $cursos;
     }
 
 

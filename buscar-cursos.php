@@ -2,12 +2,23 @@
 
 
 require_once "vendor/autoload.php";
-require_once "src/Buscador.php";
+// require_once "src/Buscador.php";
 
+
+require_once "./utils/funcoes.php";
+require_once "./utils/teste.php";
+
+new hello();
+echo PHP_EOL;
+
+faz();
+
+use Alura\BuscadorCursos\Buscador;
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
-// use Alura\BuscadorCursos\Buscador;
 
+
+exit();
 $curso = new Buscador(new Client(), new Crawler());
 
 

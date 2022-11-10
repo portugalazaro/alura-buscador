@@ -17,5 +17,13 @@
         "guzzlehttp/guzzle": "^7.5",
         "symfony/dom-crawler": "^6.1",
         "symfony/css-selector": "^6.1"
+    },
+
+    "autoload": {
+        "classmap": ["./utils/funcoes.php"],
+        "file" : ["./utils/teste.php"],
+        "psr-4": {
+            "Alura\\BuscadorCursos\\": "src/"
+        }
     }
 }

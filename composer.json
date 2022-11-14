@@ -1,6 +1,6 @@
 {
     "name": "portuga/buscar-alura",
-    "license" : "GPL-3.0-or-later",
+    "license" : "GPL",
     "autoload": {
         "psr-4": {
             "Portuga\\BuscarAlura\\": "src/"

@@ -32,5 +32,7 @@
 
     "scripts": {
         "phpcs": "phpcs --standard=PSR12 ./src/"
-    }
+    },
+
+    "bin": ["buscar-cursos.php"]
 }
